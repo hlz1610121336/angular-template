@@ -1,0 +1,23 @@
+<!--
+ * @Author: lizhi.han
+ * @Date: 2020-11-27 10:25:32
+ * @LastEditTime: 2020-11-27 12:53:00
+ * @LastEditors: lizhi.han
+ * @Description: 
+-->
+<nz-layout class="page-layout">
+    <nz-sider nzBreakpoint='lg' nzCollapsible [nzCollapsed]="isCollapsed" (nzCollapsedChange)="onTriggerCollapsed()">
+        <app-sider [isCollapsed]="isCollapsed"></app-sider>
+    </nz-sider>
+    <nz-layout>
+        <nz-header>
+        <app-header></app-header>
+        </nz-header>
+        <nz-content class="page-layout-content">
+        <app-content></app-content>
+        </nz-content>
+        <nz-footer class="footer">
+            <app-footer></app-footer>
+        </nz-footer>
+    </nz-layout>
+</nz-layout>

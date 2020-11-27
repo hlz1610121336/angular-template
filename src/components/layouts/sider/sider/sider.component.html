@@ -1,0 +1,20 @@
+<!--
+ * @Author: lizhi.han
+ * @Date: 2020-11-27 11:35:05
+ * @LastEditTime: 2020-11-27 12:56:01
+ * @LastEditors: lizhi.han
+ * @Description: 
+-->
+<div class="logo">logo</div>
+<ul nz-menu [nzMode]="isCollapsed?'vertical':'inline'" [nzInlineCollapsed]="isCollapsed" nzTheme="dark">
+    <li nz-menu-item nzSelected>
+        <i nz-icon nzType="home"></i>
+        <span>首页</span>
+    </li>
+    <li nz-submenu nzTitle="二级菜单" nzIcon="appstore">
+        <ul>
+            <li nz-menu-item>Option1</li>
+            <li nz-menu-item>Option2</li>
+        </ul>
+    </li>
+</ul>
