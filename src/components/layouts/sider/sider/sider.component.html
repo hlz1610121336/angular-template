@@ -1,20 +1,44 @@
 <!--
  * @Author: lizhi.han
  * @Date: 2020-11-27 11:35:05
- * @LastEditTime: 2020-11-27 12:56:01
+ * @LastEditTime: 2020-11-27 19:02:07
  * @LastEditors: lizhi.han
  * @Description: 
 -->
 <div class="logo">logo</div>
 <ul nz-menu [nzMode]="isCollapsed?'vertical':'inline'" [nzInlineCollapsed]="isCollapsed" nzTheme="dark">
-    <li nz-menu-item nzSelected>
+    <!-- <ng-container *ngTemplateOutlet="route; context: { $implicit: routes }"></ng-container>
+    <ng-template #route let-menus>
+        <ng-container *ngFor="let item of routes">
+            <li 
+            *ngIf="!item.children"
+            [routerLink]="[item.path]" 
+            nz-menu-item
+            [nzMatchRouter]="true"
+            >
+                <i nz-icon [nzType]="item.icon"></i>
+                <span>{{item.title}}</span>
+            </li>
+            <li 
+            *ngIf="item.children"
+            [nzIcon]="item.icon"
+            [nzTitle]="item.title"
+            nz-submenu
+            >
+            <ul>
+                <ng-container *ngTemplateOutlet="route; context: { $implicit: item.children }"></ng-container>
+              </ul>
+            </li>
+        </ng-container>
+    </ng-template> -->
+    <li [routerLink]="['/']" nz-menu-item [nzMatchRouter]="true" >
         <i nz-icon nzType="home"></i>
         <span>首页</span>
     </li>
     <li nz-submenu nzTitle="二级菜单" nzIcon="appstore">
         <ul>
-            <li nz-menu-item>Option1</li>
-            <li nz-menu-item>Option2</li>
+            <li nz-menu-item nzMatchRouter>Option1</li>
+            <li nz-menu-item nzMatchRouter>Option2</li>
         </ul>
     </li>
 </ul>

@@ -1,7 +1,7 @@
 /*
  * @Author: lizhi.han
  * @Date: 2020-11-27 11:23:48
- * @LastEditTime: 2020-11-27 12:33:02
+ * @LastEditTime: 2020-11-27 17:36:29
  * @LastEditors: lizhi.han
  * @Description: 
  */
@@ -33,6 +33,6 @@ import { ContentComponent } from './content/content/content.component';
     NzIconModule,
     AppRoutingModule
   ],
-  exports:[LayoutComponent]
+  exports: [LayoutComponent]
 })
 export class LayoutModule { }
