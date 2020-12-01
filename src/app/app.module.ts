@@ -1,9 +1,9 @@
 /*
  * @Author: lizhi.han
  * @Date: 2020-11-27 09:15:47
- * @LastEditTime: 2020-11-27 11:33:08
+ * @LastEditTime: 2020-12-01 15:35:22
  * @LastEditors: lizhi.han
- * @Description: 
+ * @Description:
  */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -16,22 +16,22 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { zh_CN } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
-import { LayoutModule } from '../components/layouts/layout.module'
+import { LayoutModule } from '../components/layouts/layout.module';
+import { AppRoutingModule } from '../router/app-routing.module';
 
 registerLocaleData(zh);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    LayoutModule
+    LayoutModule,
+    AppRoutingModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
